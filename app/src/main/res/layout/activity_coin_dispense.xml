@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="za.co.itlab.cashdispense.CoinDispenseActivity">
+
+    <TextView
+        android:id="@+id/amountDueTextView"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/amountDue"
+        android:text="@string/amount_due" />
+
+    <EditText
+        android:id="@+id/amountDue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="25.50"
+        android:inputType="numberDecimal"
+        android:maxLength="10"
+        android:text="0.00"
+        android:layout_toRightOf="@+id/amountDueTextView"
+         />
+
+
+    <TextView
+        android:id="@+id/captureDenominationTextView"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/amountDue"
+        android:layout_weight="1"
+        android:text="@string/capture_denomination" />
+
+    <EditText
+        android:id="@+id/amountTender"
+        style="@android:style/TextAppearance.Medium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/captureDenominationTextView"
+        android:hint="25.50"
+        android:inputType="numberDecimal"
+        android:text="0.00"
+        android:maxLength="10" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/amountTender"
+        android:onClick="submit"
+        android:text="Submit" />
+
+</RelativeLayout>
